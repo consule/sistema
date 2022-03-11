@@ -9,3 +9,6 @@ export * from './lib/icone-editar/icone-editar.module';
 
 export * from './lib/icone-visualizar/icone-visualizar.component';
 export * from './lib/icone-visualizar/icone-visualizar.module';
+
+export * from './lib/icone-excluir/icone-excluir.component';
+export * from './lib/icone-excluir/icone-excluir.module';
