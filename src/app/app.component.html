@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <h4 class="m-2"> Titulo </h4>
+      <h4 class="m-2"> {{ titulo }} </h4>
     </div>
     <div class="col-sm-6">      
       <lib-botao-adicionar></lib-botao-adicionar>
@@ -15,31 +15,16 @@
         <th scope="col" class="text-center">Ações</th>
       </tr>
     </thead>
+    <!-- {{ pessoas | json }} -->
     <tbody>
-      <tr>
-        <td scope="row">Cristiano</td>       
-        <td>cristiano@consule.com.br</td>
+      <tr *ngFor="let pessoa of pessoas">
+        <td scope="row"> {{ pessoa.nome  }}</td>       
+        <td> {{ pessoa.email }}</td>
         <td class="text-center">          
           <lib-icone-editar></lib-icone-editar>
           <lib-icone-excluir></lib-icone-excluir> 
         </td>
-      </tr>
-      <tr>
-        <td scope="row">Samuel</td>
-        <td>cristiano@consule.com.br</td>
-        <td class="text-center">
-          <lib-icone-editar></lib-icone-editar>
-          <lib-icone-excluir></lib-icone-excluir>          
-        </td>
-      </tr>
-      <tr>
-        <td scope="row">Leandro</td>
-        <td>cristiano@consule.com.br</td>
-        <td class="text-center">
-          <lib-icone-editar></lib-icone-editar>
-          <lib-icone-excluir></lib-icone-excluir>
-        </td>
-      </tr>
+      </tr>     
     </tbody>
   </table>
 </div>
