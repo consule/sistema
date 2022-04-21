@@ -12,11 +12,11 @@ const routes: Routes = [
     component: ListarPessoaComponent
   }, 
   {
-    path: "editar-pessoa", 
+    path: "editar-pessoa/:id", 
     component: EditarPessoaComponent
   }, 
   {
-    path: "excluir-pessoa", 
+    path: "excluir-pessoa/:id", 
     component: ExcluirPessoaComponent
   }, 
   {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PessoaService } from '../pessoa.service';
 
 @Component({
   selector: 'app-listar-pessoa',
@@ -7,30 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarPessoaComponent implements OnInit {
 
-  constructor() { }
+  pessoas: any;
+
+  constructor(private servicePessoa: PessoaService ) { }
 
   ngOnInit(): void {
+    this.getTodosRegistros();
+  }
+
+  getTodosRegistros() {
+    this.servicePessoa.getTodasPessoas().subscribe(resultado => {
+      this.pessoas = resultado;
+    });
   }
 
   titulo = 'Lista de pessoas';
-
-  pessoas = [
-    {
-      "nome" : "Cristiano Consule", 
-      "email" : "cristiano@consule.com.br"
-    }, 
-    {
-      "nome" : "Samuel Ferraz", 
-      "email" : "samuel@consule.com.br"
-    }, 
-    {
-      "nome" : "Leandro Cezar",
-      "email" : "leandro@consule.com.br"
-    }, 
-    {
-      "nome" : "Larissa", 
-      "email" : "larissa@consule.com.br"
-    }
-  ]
-
 }

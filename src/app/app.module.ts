@@ -9,6 +9,7 @@ import { EditarPessoaComponent } from './editar-pessoa/editar-pessoa.component';
 import { ExcluirPessoaComponent } from './excluir-pessoa/excluir-pessoa.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.componen
     BotaoAdicionarModule, 
     IconeEditarModule, 
     IconeVisualizarModule, 
-    IconeExcluirModule, AppRoutingModule
+    IconeExcluirModule, AppRoutingModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
