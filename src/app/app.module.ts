@@ -4,11 +4,20 @@ import { BotaoAdicionarModule } from 'projects/layout/src/lib/botao-adicionar/bo
 import { IconeEditarModule, IconeExcluirModule, IconeVisualizarModule, LayoutModule } from 'projects/layout/src/public-api';
 
 import { AppComponent } from './app.component';
+import { ListarPessoaComponent } from './listar-pessoa/listar-pessoa.component';
+import { EditarPessoaComponent } from './editar-pessoa/editar-pessoa.component';
+import { ExcluirPessoaComponent } from './excluir-pessoa/excluir-pessoa.component';
+import { AppRoutingModule } from './app-routing.module';
+import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ListarPessoaComponent,
+    EditarPessoaComponent,
+    ExcluirPessoaComponent,
+    InserirPessoaComponent,
 
   ],
   imports: [
@@ -17,7 +26,7 @@ import { AppComponent } from './app.component';
     BotaoAdicionarModule, 
     IconeEditarModule, 
     IconeVisualizarModule, 
-    IconeExcluirModule
+    IconeExcluirModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
