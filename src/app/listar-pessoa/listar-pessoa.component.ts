@@ -9,8 +9,9 @@ import { PessoaService } from '../pessoa.service';
 export class ListarPessoaComponent implements OnInit {
 
   pessoas: any;
+  titulo = 'Lista de pessoas';
 
-  constructor(private servicePessoa: PessoaService ) { }
+  constructor(private servicePessoa: PessoaService) { }
 
   ngOnInit(): void {
     this.getTodosRegistros();
@@ -22,5 +23,5 @@ export class ListarPessoaComponent implements OnInit {
     });
   }
 
-  titulo = 'Lista de pessoas';
+  
 }

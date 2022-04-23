@@ -1,22 +1,22 @@
 <div class="container">
-    <form>
+    <div>
         <h4>Excluir pessoa</h4>
         <hr>
         <div class="form-group">
           <label for="nomecompleto">Nome completo</label>
-          <input type="text" class="form-control" id="nomecompleto" aria-describedby="nomecompleto">
+          <input readonly="readonly" type="text" class="form-control" id="nomecompleto" aria-describedby="nomecompleto" value="{{ pessoaSelecionada.nome }}">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="email">
+            <input readonly="readonly" type="email" class="form-control" id="email" aria-describedby="email" value="{{ pessoaSelecionada.email }}">
           </div>
           <div class="row">
             <div class="col-sm-6">
-                <button type="submit" class="btn btn-danger">Confirmar exclusão</button>
+                <button type="submit" class="btn btn-danger" (click)="excluir()">Confirmar exclusão</button>
             </div>
             <div class="col-sm-6">      
                 <button type="submit" class="btn btn-warning float-right" routerLink="/">Voltar</button>
             </div>
           </div>    
-      </form>    
+        </div>    
     </div>
