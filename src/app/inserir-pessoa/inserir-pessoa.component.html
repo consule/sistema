@@ -1,22 +1,22 @@
 <div class="container">
-    <div>
+    <form [formGroup]="formulario">
         <h4>Inserir pessoa</h4>
         <hr>
         <div class="form-group">
           <label for="nomecompleto">Nome completo</label>
-          <input type="text" class="form-control" id="nomecompleto" aria-describedby="nomecompleto" #nomecompleto>
+          <input type="text" formControlName="nomecompleto" class="form-control" id="nomecompleto" aria-describedby="nomecompleto" #nomecompleto>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="email" #email>
+            <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="email" #email>
           </div>
           <div class="row">
             <div class="col-sm-6">      
               <button type="submit" class="btn btn-warning" routerLink="/">Voltar</button>
           </div>
             <div class="col-sm-6">
-                <button type="submit" class="btn btn-success float-right" (click)="salvar(nomecompleto.value, email.value)" >Salvar</button>
+                <button type="submit" [disabled]="!formulario.valid" class="btn btn-success float-right" (click)="salvar(nomecompleto.value, email.value)" >Salvar</button>
             </div>            
           </div>    
-        </div>    
+        </form>    
     </div>

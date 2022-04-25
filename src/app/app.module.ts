@@ -10,6 +10,7 @@ import { ExcluirPessoaComponent } from './excluir-pessoa/excluir-pessoa.componen
 import { AppRoutingModule } from './app-routing.module';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     IconeEditarModule, 
     IconeVisualizarModule, 
     IconeExcluirModule, AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
